@@ -4,6 +4,9 @@
    "builds": [
       { "src": "app.js", "use": "@vercel/node" }
    ],
+   {
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+},
    "routes": [
       { "src": "/(.*)", "dest": "/app.js" }
    ]
